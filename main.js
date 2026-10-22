@@ -1,7 +1,5 @@
-const caixaPrincipal = document.querySelector(".caixa-principal");
 const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
-const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
@@ -45,18 +43,25 @@ const perguntas = [
 ];
 
 let atual = 0;
-let perguntaAtual;
 
 function mostraPergunta() {
-  perguntaAtual = perguntas[atual];
+  const perguntaAtual = perguntas[atual];
   caixaPerguntas.textContent = perguntaAtual.enunciado;
-  mostraAlternativas();
-}
+  caixaAlternativas.innerHTML = "";
 
-function mostraAlternativas() {
   for (const alternativa of perguntaAtual.alternativas) {
     const botaoAlternativas = document.createElement("button");
     botaoAlternativas.textContent = alternativa;
+    botaoAlternativas.addEventListener("click", function () {
+      atual++;
+      if (atual < perguntas.length) {
+        mostraPergunta();
+      } else {
+        caixaPerguntas.textContent = "Você respondeu todas as perguntas!";
+        caixaAlternativas.innerHTML = "";
+        textoResultado.textContent = "Obrigado por participar.";
+      }
+    });
     caixaAlternativas.appendChild(botaoAlternativas);
   }
 }
