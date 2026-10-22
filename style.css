@@ -1,27 +1,77 @@
-:root {
-  --cor-fundo: #01080E;
-  --cor-principal: #fd87ec;
-  --cor-secundaria: #fa9ce6;
-  --cor-destaque: #fae422;
-  --cor-texto: #D7F9FF;
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root{
+    --cor-fundo: #550bc5;
+    --cor-principal: #eee8e3;
+    --cor-secundaria: #c010c0;
+    --cor-destaque: #8875a8;
+    --cor-texto: #393542;
+
 }
 
 body {
-  background-color: var(--cor-fundo);
-  color: var(--cor-texto);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+    background: linear-gradient(135deg, #f8f7fa 0%, #eeebf2 100%);
+    color: var(--cor-texto);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
 }
 
-.caixa-principal {
-  background-color: var(--cor-principal);
-  width: 90%;
-  text-align: center;
-  padding: 20px;
+.caixa-principal{
+    background: linear-gradient(145deg, #fffefd 0%, #faf8fc 100%);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 16px 40px rgb(57 53 66 / 8%);
 }
 
-h1 {
-  color: var(--cor-destaque);
+h1, .caixa-perguntas, .caixa-resultado{
+    font-family: 'Chakra Petch', sans-serif;
+}
+.caixa-alternativas{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.caixa-perguntas,
+.caixa-alternativas {
+    display: none;
+}
+
+.caixa-perguntas.mostrar {
+    display: block;
+}
+
+.caixa-alternativas.mostrar {
+    display: flex;
+}
+
+.caixa-resultado {
+    display: none;
+}
+
+.caixa-resultado.mostrar {
+    display: block;
+}
+
+button {
+    background: linear-gradient(135deg, #eee9f3 0%, #e2dbea 100%);
+    color: #45404f;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover{
+    background: linear-gradient(135deg, #a99abb 0%, #9181a6 100%);
+    color: #ffffff;
+    transform: translateY(-2px);
 }
