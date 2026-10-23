@@ -9,7 +9,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #f8f7fa 0%, #eeebf2 100%);
+    background: linear-gradient(135deg, #c3abf3 0%, #eeebf2 100%);
     color: var(--cor-texto);
     font-family: 'Inter', sans-serif;
     display: flex;
@@ -25,7 +25,7 @@ body {
     max-width: 600px;
     text-align: center;
     padding: 20px;
-    border: 1px solid #ffffff;
+    border: 1px solid #f3c4e7;
     border-radius: 20px;
     box-shadow: 0 16px 40px rgb(57 53 66 / 8%);
 }
@@ -61,7 +61,7 @@ h1, .caixa-perguntas, .caixa-resultado{
 }
 
 button {
-    background: linear-gradient(135deg, #eee9f3 0%, #e2dbea 100%);
+    background: linear-gradient(135deg, #eeb7dc 0%, #f1acdd 100%);
     color: #45404f;
     border: none;
     border-radius: 15px;
@@ -71,7 +71,7 @@ button {
 }
 
 button:hover{
-    background: linear-gradient(135deg, #a99abb 0%, #9181a6 100%);
+    background: linear-gradient(135deg, #5d01ce 0%, #e074ce 100%);
     color: #ffffff;
     transform: translateY(-2px);
 }
